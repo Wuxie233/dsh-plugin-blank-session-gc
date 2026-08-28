@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict'
-import { isUnusedBlank, pickVictims } from '../lib/logic.js'
+import { isOrdinarySession, isUnusedBlank, pickVictims } from '../lib/logic.js'
+
+assert.equal(isOrdinarySession({}), true)
+assert.equal(isOrdinarySession({ origin: undefined }), true)
+assert.equal(isOrdinarySession({ origin: 'subagent' }), false)
+assert.equal(isOrdinarySession({ origin: 'automation' }), false)
 
 assert.equal(isUnusedBlank([]), true)
 assert.equal(isUnusedBlank([{ type: 'permission/preset' }]), true)

@@ -1,7 +1,7 @@
 {
   "name": "dsh-plugin-blank-session-gc",
-  "description": "Keep at most one unused blank conversation: scan on session create and delete the rest from workspace accounts and JSONL logs",
-  "version": "0.1.0",
+  "description": "Keep at most one unused ordinary blank conversation: scan on session create and delete the rest from workspace accounts and JSONL logs",
+  "version": "0.1.1",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
