@@ -1,0 +1,36 @@
+{
+  "$schema": "urn:dsh-std:manifest:0.15",
+  "manifestVersion": "0.15",
+  "id": "dev.starpivot.blank-session-gc",
+  "name": "blank-session-gc",
+  "version": "0.1.1",
+  "facets": {
+    "host": {
+      "entry": "lib/index.js",
+      "apiVersion": "v1alpha1"
+    }
+  },
+  "requires": {
+    "contracts": []
+  },
+  "permissions": [],
+  "contributes": {
+    "commands": [],
+    "x-dev.dsh-std.extensions": [
+      {
+        "id": "dev.starpivot.blank-session-gc.host",
+        "apiVersion": "plugins.starpivot.dev/v1",
+        "kind": "HostPlugin",
+        "name": "dev.starpivot.blank-session-gc",
+        "spec": {
+          "services": [
+            "sessionPersistence",
+            "workspaceRegistry",
+            "sessions"
+          ]
+        }
+      }
+    ]
+  },
+  "subscriptions": []
+}
